@@ -77,7 +77,7 @@
                                     </ul>
                                 </div>
                                 <div class="bar__module">
-                                    <a class="btn btn--sm btn--primary type--uppercase" href="#purchase-template"> <span class="btn__text" onclick="daftarEarlyAccess();">
+                                    <a class="btn btn--sm btn--primary type--uppercase" href="#purchase-template"> <span class="btn__text" onclick="daftarEarlyAccess(event);">
                                     Daftar early access</span> </a>
                                 </div>
                             </div>
@@ -347,8 +347,9 @@
         <script src="js/smooth-scroll.min.js"></script>
         <script src="js/scripts.js"></script>
         <script type="text/javascript">
-            function daftarEarlyAccess() {
+            function daftarEarlyAccess(event) {
               ga('send', {
+                hitType: 'event',
                 eventCategory: 'Inbound Link',
                 eventAction: 'click',
                 eventLabel: 'daftar-early-access'

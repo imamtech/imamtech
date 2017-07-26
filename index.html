@@ -300,7 +300,62 @@
                             <div class="pricing pricing-2 boxed boxed--border boxed--lg"> <span class="label">Value</span>
                                 <div class="col-md-6 col-xs-12 text-center">
                                     <h5>Early Access Batch 1 (Pendaftaran tutup tanggal 1 Agustus 2017)&nbsp;</h5> <span class="h2"><p>Rp 200 ribu</p></span>
-                                    <a class="btn btn--primary" href="#"> <span class="btn__text">Daftar</span> </a>
+                                    <div class="modal-instance">
+                                        <a href="#" class="btn btn--primary modal-trigger" onclick="openEarlyAccessModal()"><span class="btn__text">Daftar</span></a>
+                                        <div class="modal-container">
+                                            <div class="modal-content">
+                                                <section class="imageblock feature-large bg--white border--round ">
+                                                    <div class="imageblock__content col-md-5 col-sm-3 pos-left">
+                                                        <div class="background-image-holder">
+                                                            <img alt="image" src="http://imagizer.imageshack.us/v2/1280x1024q90/922/1t2K0z.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-5 col-md-push-6 col-sm-7 col-sm-push-4">
+                                                                <h2>Daftar Imam.tech</h2>
+                                                                <p class="lead">Get started with a 14 day free trial, No credit card required &mdash; cancel at any time.</p>
+                                                                <a class="btn block btn--icon bg--facebook type--uppercase" href="#">
+                                                                    <span class="btn__text">
+                                                                        <i class="socicon-facebook"></i>
+                                                                        Sign up with Facebook
+                                                                    </span>
+                                                                </a>
+                                                                <a class="btn block btn--icon bg--twitter type--uppercase" href="#">
+                                                                    <span class="btn__text">
+                                                                        <i class="socicon-twitter"></i>
+                                                                        Sign up with Twitter
+                                                                    </span>
+                                                                </a>
+                                                                <hr data-title="OR">
+                                                                <form>
+                                                                    <div class="row">
+                                                                        <div class="col-xs-12">
+                                                                            <input type="email" name="Email Address" placeholder="Email Address" />
+                                                                        </div>
+                                                                        <div class="col-xs-12">
+                                                                            <input type="password" name="Password" placeholder="Password" />
+                                                                        </div>
+                                                                        <div class="col-xs-12">
+                                                                            <button type="submit" class="btn btn--primary type--uppercase">Create Account</button>
+                                                                        </div>
+                                                                        <div class="col-xs-12">
+                                                                            <span class="type--fine-print">By signing up, you agree to the
+                                                                                <a href="#">Terms of Service</a>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <!--end of row-->
+                                                    </div>
+                                                    <!--end of container-->
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-6 col-xs-12">
                                     <ul>
@@ -341,6 +396,10 @@
                 </div>
             </footer>
         </div>
+        <div class="all-page-modals">
+            
+        </div>
+        </div>
         <script src="js/jquery-3.1.1.min.js"></script>
         <script src="js/parallax.js"></script>
         <script src="js/granim.min.js"></script>
@@ -354,6 +413,14 @@
                 eventAction: 'click',
                 eventLabel: 'daftar-early-access-ref'
               });
+            }
+            function openEarlyAccessModal() {
+                ga('send', {
+                    hitType: 'event',
+                    eventCategory: 'Inbound Link',
+                    eventAction: 'click',
+                    eventLabel: 'open-early-access-modal'
+                })
             }
         </script>
     </body>

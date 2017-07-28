@@ -327,7 +327,7 @@
                                                                             <input type="name" name="PHONE" placeholder="Nomor Handphone" class="validate-required" required="" />
                                                                         </div>
                                                                         <div class="col-xs-12">
-                                                                            <button type="submit" onclick="goog_snippet_vars()" class="btn btn--primary type--uppercase">Daftar</button>
+                                                                            <button type="submit" class="btn btn--primary type--uppercase">Daftar</button>
                                                                         </div>
                                                                     </div>
                                                                     <!--end row-->
@@ -408,27 +408,42 @@
                 })
             }
         </script>
-        <!-- Google Code for Imam.tech Conversion Page -->
+        <!-- Google Code for Imam.tech Conversion Page
+        In your html page, add the snippet and call
+        goog_report_conversion when someone clicks on the
+        chosen link or button. -->
         <script type="text/javascript">
-        /* <![CDATA[ */
-        var google_conversion_id = 1043320718;
-        var google_conversion_language = "en";
-        var google_conversion_format = "3";
-        var google_conversion_color = "ffffff";
-        var google_conversion_label = "b0BVCLWgvXMQjp-_8QM";
-        var google_remarketing_only = false;
+          /* <![CDATA[ */
+          goog_snippet_vars = function() {
+            var w = window;
+            w.google_conversion_id = 1043320718;
+            w.google_conversion_label = "b0BVCLWgvXMQjp-_8QM";
+            w.google_remarketing_only = false;
+          }
+          // DO NOT CHANGE THE CODE BELOW.
+          goog_report_conversion = function(url) {
+            goog_snippet_vars();
+            window.google_conversion_format = "3";
+            var opt = new Object();
+            opt.onload_callback = function() {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          }
+          var conv_handler = window['google_trackConversion'];
+          if (typeof(conv_handler) == 'function') {
+            conv_handler(opt);
+          }
+        }
         /* ]]> */
         </script>
-        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        <script type="text/javascript"
+          src="//www.googleadservices.com/pagead/conversion_async.js">
         </script>
-        <noscript>
-        <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1043320718/?label=b0BVCLWgvXMQjp-_8QM&amp;guid=ON&amp;script=0"/>
-        </div>
-        </noscript>
+
 
         <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1043320718/?label=b0BVCLWgvXMQjp-_8QM&amp;guid=ON&amp;script=0"/>
+        <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1043320718/?label=b0BVCLWgvXMQjp-_8QM&amp;guid=ON&amp;script=0"/>
         </div>
         </noscript>
 

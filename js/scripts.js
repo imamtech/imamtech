@@ -825,6 +825,10 @@ mr = (function (mr, $, window, document){
                                 
                                 submitButton.removeClass('btn--loading');
 
+                                window.goog_report_conversion();
+
+                                console.log('kepo');
+
                                 successRedirect = thisForm.attr('data-success-redirect');
                                 // For some browsers, if empty `successRedirect` is undefined; for others,
                                 // `successRedirect` is false.  Check for both.

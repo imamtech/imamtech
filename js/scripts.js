@@ -771,7 +771,7 @@ mr = (function (mr, $, window, document){
         body.find('.form-error, .form-success').remove();
         submitButton.attr('data-text', submitButton.text());
         errorText = thisForm.attr('data-error') ? thisForm.attr('data-error') : "Please fill all fields correctly";
-        successText = thisForm.attr('data-success') ? thisForm.attr('data-success') : "Terima kasih telah mendaftar, harap cek email anda untuk konfirmasi";
+        successText = thisForm.attr('data-success') ? thisForm.attr('data-success') : "Terima kasih telah mendaftar, harap cek email anda untuk informasi selanjutnya";
         body.append('<div class="form-error" style="display: none;">' + errorText + '</div>');
         body.append('<div class="form-success" style="display: none;">' + successText + '</div>');
         formError = body.find('.form-error');

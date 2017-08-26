@@ -744,7 +744,8 @@ mr = (function (mr, $, window, document){
         
         //////////////// Handle Form Submit
 
-        $('form.form-email, form[action*="list-manage.com"], form[action*="createsend.com"]').attr('novalidate', true).off('submit').on('submit', mr.forms.submit);
+        // $('form.form-email, form[action*="list-manage.com"], form[action*="createsend.com"]').attr('novalidate', true).off('submit').on('submit', mr.forms.submit);
+        $('form.form-email, form[action*="list-manage.com"]').attr('novalidate', true).off('submit').on('submit', mr.forms.submit);
 
         //////////////// Handle Form Submit
         $(document).on('change, input, paste, keyup', '.attempted-submit .field-error', function(){
@@ -1816,10 +1817,6 @@ mr = (function (mr, $, window, document){
            }
         }
 
-        // Alter action for a Campaign Monitor-compatible ajax request url.
-        if(/createsend\.com/.test(action)){
-           action = action + '?callback=?';
-        }
 
         // Set action on the form
         $(form).attr('action', action);

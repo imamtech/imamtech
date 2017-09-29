@@ -258,9 +258,14 @@ mixpanel.init("74d7ff02989033d2edc114ecde9539dc");</script><!-- end Mixpanel -->
 
 			var player;
 			function onYouTubeIframeAPIReady() {
-			    player = new YT.Player('existing-iframe-example', {
+			    player = new YT.Player('videoplay', {
 			        events: {
-			          'onReady': onPlayerReady,
+			          'onStateChange': function(event){
+			          	if (event.data === YT.PlayerState.PLAYING){
+			          		window.kepo = event;
+			          		console.log('banget');
+			          	}
+			          },
 			        }
 			    });
 			  }

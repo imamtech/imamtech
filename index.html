@@ -247,14 +247,23 @@ mixpanel.init("74d7ff02989033d2edc114ecde9539dc");</script><!-- end Mixpanel -->
         	mixpanel.track_links('#gotodaftarlink', 'Go to daftar Link');
         	mixpanel.track_links('#freepreviewlink', 'Go to free preview Link');
         	mixpanel.track_links('#trellolink', 'Trello Link');
-        	mixpanle.track_links('#daftarlink', 'Daftar link')
-        	mixpanle.track_links('#videoplay', 'Video play')
+        	mixpanel.track_links('#daftarlink', 'Daftar link')
+        	mixpanel.track_links('#videoplay', 'Video play')
 
         	var tag = document.createElement('script');
 			  tag.id = 'iframe-demo';
 			  tag.src = 'https://www.youtube.com/iframe_api';
 			  var firstScriptTag = document.getElementsByTagName('script')[0];
 			  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+
+			var player;
+			function onYouTubeIframeAPIReady() {
+			    player = new YT.Player('existing-iframe-example', {
+			        events: {
+			          'onReady': onPlayerReady,
+			        }
+			    });
+			  }
         </script>
 
     </body>
